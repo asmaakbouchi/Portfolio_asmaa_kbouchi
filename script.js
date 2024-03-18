@@ -81,7 +81,7 @@ function sendEmail(){
         Subject : subject.value,
         Body :bodyMessage
     })
-    .then(message=>alert(`Message Send. Thank You For your Contact <br> Status ${message}`));
+    .then(message=>alert(`Message Send. Thank You For your Contact`));
 }
 
 form.addEventListener("submit",(e)=>{
