@@ -9,7 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header class="header">
+    <header class="header" >
         <a href="index.html" class="logo"><i class='bx bx-code-alt' ></i> Asmaa Dev <i class='bx bx-code-alt' ></i></a>
         <i class='bx bx-menu' id="menu-icon"></i> 
         <nav class="navbar">
@@ -23,7 +23,7 @@
 
     <section class="home" id="home">
        
-        <div class="home-content">
+        <div class="home-content" >
             <h3>Hello, my name's </h3>
             <h1>Asmaa Kbouchi</h1>
             <h3>I'am a <span id="job">Frontend Developper</span></h3> 
@@ -215,20 +215,21 @@
             </div>
         </div>
     </section>
+
    <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>  
-        <form action="">
+        <form action="" id="contactForm">
             <div class="input-box">
-                <input type="text" placeholder="FullName">
-                <input type="email" placeholder="Email Adress">
+                <input type="text" id="fullName" placeholder="FullName" required>
+                <input type="email"  id="email" placeholder="Email Adress" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Sbject">
+                <input type="number"  id="phone" placeholder="Mobile Number" required>
+                <input type="text"  id="subject" placeholder="Email Sbject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="8" placeholder="Your Message"></textarea>
+            <textarea name="" id="" cols="30" rows="8" placeholder="Your Message" required></textarea>
             <div class="contact-box"> 
-                <input type="submit" value="Send Message" class="btn"> 
+                <input type="submit"  id="Message" value="Send Message" class="btn"> 
                 <div class="social-media">
                     <a href="https://github.com/asmaakbouchi"><i style="--x:1;" class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/asmaa-kbouchi/"><i style="--x:2;" class='bx bxl-linkedin'></i></a>
@@ -251,7 +252,7 @@
 
 <!-- Scroll reveal -->
 <script src="https://unpkg.com/scrollreveal"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

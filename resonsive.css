@@ -1,6 +1,7 @@
 :root{
     --bg-color:#1F242D;
-    --second-bg-color:#323946;
+    /* linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)); */
+    --second-bg-color:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6));
     --text-color: #fff;
     --main-color:#d4b998;
 }

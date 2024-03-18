@@ -51,3 +51,39 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .project-box', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .contact form', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .process', { origin: 'right' });
+
+
+const form=document.querySelector('form');
+const fullname=document.getElementById('fullName');
+const email =document.getElementById('email');
+const subject =document.getElementById('subject');
+const phone =document.getElementById('phone');
+const message=document.getElementById('Message');
+
+
+
+
+function sendEmail(){
+    const bodyMessage=`Full Name : ${fullname.value} <br>
+    Email :${email.value} <br>
+    Phone Number :${phone.value} <br>
+    Message : ${message.value}
+    
+    `
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "asmaakbouchi@gmail.com",
+        Password : "0F48E4335E15BA10069EF12413A64D668FC4",
+        To : 'asmaakbouchi@gmail.com',
+        From : "asmaakbouchi@gmail.com",
+        Subject : subject.value,
+        Body :bodyMessage
+    }).then(
+      message => alert(message)
+    ).then(message=>alert("Message Send. Thank You For your Contact"));
+}
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    sendEmail();
+})
