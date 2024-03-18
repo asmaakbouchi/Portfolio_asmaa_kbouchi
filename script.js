@@ -58,16 +58,18 @@ const fullname=document.getElementById('fullName');
 const email =document.getElementById('email');
 const subject =document.getElementById('subject');
 const phone =document.getElementById('phone');
+const msg=document.getElementById('msg');
 const message=document.getElementById('Message');
 
 
 
 
 function sendEmail(){
-    const bodyMessage=`Full Name : ${fullname.value} <br>
+    const bodyMessage=
+    `Full Name : ${fullname.value} <br>
     Email :${email.value} <br>
     Phone Number :${phone.value} <br>
-    Message : ${message.value}
+    Message : ${msg.value}
     
     `
     Email.send({
@@ -78,9 +80,8 @@ function sendEmail(){
         From : "asmaakbouchi@gmail.com",
         Subject : subject.value,
         Body :bodyMessage
-    }).then(
-      message => alert(message)
-    ).then(message=>alert("Message Send. Thank You For your Contact"));
+    })
+    .then(message=>alert(`Message Send. Thank You For your Contact <br> Status ${message}`));
 }
 
 form.addEventListener("submit",(e)=>{
