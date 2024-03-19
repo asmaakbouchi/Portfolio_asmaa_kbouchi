@@ -49,17 +49,7 @@
     100%{transform: translateY(0);}  
   }
 
-  @keyframes changeTitle {
-    0% {
-      content: "Frontend Developer"; /* Starting text */
-    }
-    50% {
-      content: "Backend Developer"; /* Intermediate text */
-    }
-    100% {
-      content: "Fullstack Developer"; /* Ending text */
-    }
-  }
+
 
 *{
     margin: 0;
@@ -144,7 +134,7 @@ color: var(--main-color);
     align-items: center;
 }
 .home-img img{
-    width: 35vw; 
+    width: 33vw; 
     animation: floatImage 4s ease-in-out infinite;
 }
 .home-content h3{
@@ -158,7 +148,10 @@ span{
     color: var(--main-color);
 }
 #job{
-       animation: changeTitle 4s infinite alternate; 
+   
+    background: -webkit-linear-gradient( var(--main-color), var(--bg-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .home-content h1{
     font-size: 5.6rem; ;
@@ -195,7 +188,7 @@ animation-delay: calc(.2s *var(--x));
     padding:1rem 2.8rem ;
     background: var(--main-color);
     border-radius: 4.3rem;
-    box-shadow: 0 0 1rem var(--main-color);
+   
     font-size: 1.6rem;
     color: var(--bg-color);
     letter-spacing: .1rem;
@@ -206,8 +199,9 @@ animation-delay: calc(.2s *var(--x));
     animation-delay: 1.5s;
 }
 .btn:hover{
-box-shadow: none;
-
+background-color: transparent;
+color: var(--main-color);
+ box-shadow: 0 0 1rem var(--main-color);
 }
 
 .about{
@@ -355,15 +349,23 @@ margin-bottom: 5rem;
     font-size: 1.6rem;
     margin: 2rem 0 2rem;
     list-style: none;
-    text-align: center
-    
+    position: relative;
 }
+
 .services-box ul li{
-    margin-bottom: 1.2rem; 
+    margin-bottom: 1.2rem;
+    display: flex;
+    width: 100%;
+    padding-left: 28%;
+    position: relative;
 }
-.services-box ul li .img-icone{
-    width:3.2rem ;
-    height: 3rem;
+.services-box li img{
+    width:3.4rem ;
+    height: 2.8rem
+}
+.services-box li p{
+    padding-left: 10%;
+   
 }
 
 .projects{
@@ -432,10 +434,15 @@ transform: translateY(0);
    font-size: 3rem;
    color: var(--text-color);
 }
+
 .contact h2{
     margin-bottom: 3rem;
 }
 .contact form{
+    border: .10rem solid var(--main-color);
+    padding: 2% 2%;
+    box-shadow: 0 0 2rem var(--main-color);
+    border-radius: 2.4rem;
     max-width: 70rem;
     margin: 1rem auto;
     text-align: center;
@@ -451,7 +458,7 @@ flex-wrap: wrap;
     font-size: 1.6rem;
     background: var(--second-bg-color);
     color: var(--text-color);
-    border-radius: .8rem;
+    border-radius: 2.3rem;
     margin: .7rem 0;
 }
 .contact form .input-box input{
@@ -464,6 +471,10 @@ flex-wrap: wrap;
     margin-top: 2rem;
     cursor: pointer;
 }
+.contact .contact-box{
+text-align: center;
+}
+
 
 .footer
 {
@@ -487,11 +498,12 @@ font-size: 1.6rem;
     transition: .5s ease;
 }
 .footer-iconTop a:hover{
-  box-shadow: 0 0 1rem var(--main-color);  
+  box-shadow: 0 0 1rem var(--main-color); 
+
 }
 .footer-iconTop a i{
   font-size: 2.4rem;
-  color: var(--second-bg-color);  
+  color: var(--bg-color);  
 }
 
 

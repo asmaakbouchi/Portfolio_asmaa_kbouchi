@@ -81,7 +81,15 @@ function sendEmail(){
         Subject : subject.value,
         Body :bodyMessage
     })
-    .then(message=>alert(`Message Send. Thank You For your Contact`));
+    .then(message=>{
+        if(message=="OK"){
+            Swal.fire({
+                title: "💌 Message Sent! 🚀",
+                text: "Thank you for getting in touch! Your inquiry means a lot to us🌟",
+                icon: "success"
+            });
+        }
+        });
 }
 
 form.addEventListener("submit",(e)=>{
