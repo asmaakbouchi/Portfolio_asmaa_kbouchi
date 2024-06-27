@@ -44,9 +44,9 @@ body {
 }
 
 @media (max-width: 760px) {
-    #menu-icon {
-        display: block;
-    }
+.header{
+ width: 99%; 
+}
     
 
     .navbar {
